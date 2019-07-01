@@ -55,16 +55,16 @@ class ViewController: UIViewController
     
     private func initAlerts()
     {
-        negativeAlert()
-        positiveAlert()
-        startAlert()
+        setupNegativeAlert()
+        setupPositiveAlert()
+        setupStartAlert()
     }
     
 }
 
 extension ViewController
 {
-    func startAlert()
+    func setupStartAlert()
     {
         let left = UIAlertAction(title: StartingPopup.leftButtonTitle, style: .default)
         { _ in
@@ -81,7 +81,7 @@ extension ViewController
         startingAlert.addAction(right)
     }
     
-    func positiveAlert()
+    func setupPositiveAlert()
     {
         let leftButton = UIAlertAction(title: PositivePopup.leftButtonTitle, style: .destructive, handler: nil)
         let rightButton = UIAlertAction(title: PositivePopup.rightButtonTitle, style: .default)
@@ -94,7 +94,7 @@ extension ViewController
         happyAlert.addAction(rightButton)
     }
     
-    func negativeAlert()
+    func setupNegativeAlert()
     {
         let leftButton = UIAlertAction(title: NegativePopup.leftButtonTitle, style: .destructive, handler: nil)
         let rightButton = UIAlertAction(title: NegativePopup.rightButtonTitle, style: .default)
